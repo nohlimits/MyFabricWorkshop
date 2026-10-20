@@ -1,24 +1,43 @@
-SILVER
-CREATE OR ALTER VIEW v_dimension_city AS
-SELECT * FROM [wwilakehouse_bronze].[dbo].[dimension_city]
-GO
+USE [wwilakehouse];
 
-CREATE OR ALTER VIEW v_dimension_customer AS
-SELECT * FROM [wwilakehouse_bronze].[dbo].[dimension_customer]
-GO
 
-CREATE OR ALTER VIEW v_dimension_date AS
-SELECT * FROM [wwilakehouse_bronze].[dbo].[dimension_date]
 GO
+CREATE OR ALTER VIEW silver.v_dimension_city
+AS
+SELECT *
+FROM   [wwilakehouse].[bronze].[dimension_city];
 
-CREATE OR ALTER VIEW v_dimension_employee AS
-SELECT * FROM [wwilakehouse_bronze].[dbo].[dimension_employee]
-GO
 
-CREATE OR ALTER VIEW v_dimension_stock_item AS
-SELECT * FROM [wwilakehouse_bronze].[dbo].[dimension_stock_item]
 GO
+CREATE OR ALTER VIEW silver.v_dimension_customer
+AS
+SELECT *
+FROM   [wwilakehouse].[bronze].[dimension_customer];
 
-CREATE OR ALTER VIEW v_fact_sales AS
-SELECT * FROM [wwilakehouse_bronze].[dbo].[fact_sale]
+
 GO
+CREATE OR ALTER VIEW silver.v_dimension_date
+AS
+SELECT *
+FROM   [wwilakehouse].[bronze].[dimension_date];
+
+
+GO
+CREATE OR ALTER VIEW silver.v_dimension_employee
+AS
+SELECT *
+FROM   [wwilakehouse].[bronze].[dimension_employee];
+
+
+GO
+CREATE OR ALTER VIEW silver.v_dimension_stock_item
+AS
+SELECT *
+FROM   [wwilakehouse].[bronze].[dimension_stock_item];
+
+
+GO
+CREATE OR ALTER VIEW silver.v_fact_sales
+AS
+SELECT *
+FROM   [wwilakehouse].[bronze].[fact_sale];
